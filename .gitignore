@@ -1,0 +1,5 @@
+*.ZIP
+
+.metadata/**
+
+**/target/**
