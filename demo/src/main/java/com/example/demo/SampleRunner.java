@@ -12,11 +12,14 @@ public class SampleRunner implements ApplicationRunner{
 	@Autowired
 	HongmaProperties prop;
 	
+	@Autowired
+	private String hello;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("============================");
 		System.out.println("name : "+prop.getName());
+		System.out.println("hello : "+hello);
 		System.out.println("============================");
 	}
 
