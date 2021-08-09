@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class H2Runner implements ApplicationRunner{
+public class MySqlRunner implements ApplicationRunner{
 
 	
 	@Autowired
