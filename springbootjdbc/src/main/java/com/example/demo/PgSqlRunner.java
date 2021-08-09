@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MySqlRunner implements ApplicationRunner{
+public class PgSqlRunner implements ApplicationRunner{
 
 	
 	@Autowired
@@ -31,13 +31,13 @@ public class MySqlRunner implements ApplicationRunner{
 			
 			
 			Statement statement = connection.createStatement();
-			String sql = "CREATE TABLE USER( ID INTEGER NOT NULL, NAME VARCHAR(255) , PRIMARY KEY(ID) ) ";
+			String sql = "CREATE TABLE account( ID INTEGER NOT NULL, NAME VARCHAR(255) , PRIMARY KEY(ID) ) ";
 			statement.executeUpdate(sql);
 			
 			connection.close();
 			
 			
-			jdbcTemplate.execute("INSERT INTO USER VALUES (1, 'HONGMA') " );
+			jdbcTemplate.execute("INSERT INTO account VALUES (1, 'HONGMA') " );
 			
 		} catch (Exception e) {
 			// TODO: handle exception
